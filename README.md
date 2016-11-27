@@ -7,15 +7,21 @@ familiar with [Git and Repo](http://source.android.com/download/using-repo).
 
 To initialize your local repository using the MULTI-ROM trees, use a command like this:
 
+    mkdir MR-Z2Plus
+
+    cd MR-Z2Plus
+
     repo init -u git://github.com/MR-Z2plus/manifest.git -b mr
 
 Then to sync up:
 
     repo sync -c -f -j8 --force-sync --no-clone-bundle
 
-Or for other devices, the old-fashioned way:
+For build MultiROM:
      
-     . build/envsetup.sh; lunch <device_name>
+     . build/envsetup.sh
+     
+     lunch tipsy_z2_plus-userdebug
 
 The following is from: https://github.com/Tasssadar/multirom/wiki/Porting-MultiROM
 
@@ -26,4 +32,3 @@ make multirom trampoline # builds multirom binary and build trampoline - MultiRO
 make multirom_zip # builds multirom and trampoline and installation ZIP file
 
 make multirom_uninstaller # builds uninstaller ZIP
-
